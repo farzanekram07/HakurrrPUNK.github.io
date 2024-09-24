@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Syed Mohammad Farzan Ekram | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Syed Mohammad Farzan Ekram</h1>
-        <p>Computer Science Postgraduate specialized in AI & ML</p>
-        <p><strong>Email:</strong> farzanekram136@gmail.com</p>
-        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/farzan-ekram07" target="_blank">linkedin.com/in/farzan-ekram07</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/farzanekram07" target="_blank">github.com/farzanekram07</a></p>
-        <a href="assets/resume.pdf" target="_blank">Download My Resume</a>
+        <div class="hero">
+            <h1>Syed Mohammad Farzan Ekram</h1>
+            <p>Computer Science Postgraduate specializing in AI & ML</p>
+            <a href="assets/resume.pdf" target="_blank" class="btn">Download My Resume</a>
+        </div>
     </header>
+
 
     <nav>
         <ul>
@@ -26,5 +28,17 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+    
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    
 </body>
 </html>
